@@ -1,60 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="theme_loengo.list">
-      <field name="name">theme_loengo list</field>
-      <field name="model">theme_loengo.theme_loengo</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
--->
+    <record id="services_page" model="website.page">
+        <field name="name">Services page</field>
+        <field name="website_published">True</field>
+        <field name="url">/services/svvsss</field>
+        <field name="type">qweb</field>
+        <field name="key">theme_tutorial.services_page</field>
+        <field name="arch" type="xml">
+            <t t-name="theme_tutorial.services_page_template">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <script>
+                            var url = window.location.pathname;
+                            if(url.split("/").indexOf("services",1) == 1){
 
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="theme_loengo.action_window">
-      <field name="name">theme_loengo window</field>
-      <field name="res_model">theme_loengo.theme_loengo</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
+                            var element = document.getElementById("before_header");
+                            var element1 = document.getElementById("top_menu_container");
+                            var element2 = document.getElementById("footer");
 
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="theme_loengo.action_server">
-      <field name="name">theme_loengo server</field>
-      <field name="model_id" ref="model_theme_loengo_theme_loengo"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
+                            if(typeof element.classList != "undefined"){
+                            element.classList.remove("bg-dark");
+                            element.classList.add("theme_danger");
+                            // element1.classList.remove("bg-dark");
+                            element1.classList.add("theme_danger");
+                            element2.classList.add("theme_danger");
+                            }
+                            }
 
-    <!-- Top menu item -->
-<!--
-    <menuitem name="theme_loengo" id="theme_loengo.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="theme_loengo.menu_1" parent="theme_loengo.menu_root"/>
-    <menuitem name="Menu 2" id="theme_loengo.menu_2" parent="theme_loengo.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="theme_loengo.menu_1_list" parent="theme_loengo.menu_1"
-              action="theme_loengo.action_window"/>
-    <menuitem name="Server to list" id="theme_loengo" parent="theme_loengo.menu_2"
-              action="theme_loengo.action_server"/>
--->
-  </data>
+                        </script>
+                        <div class="container">
+                            <h1>Our Services</h1>
+                            <ul class="services">
+                                <li>Cloud Hosting</li>
+                                <li>Support</li>
+                                <li>Unlimited space</li>
+                            </ul>
+
+                            <!-- === Snippets' area === -->
+                            <div class="oe_structure"/>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+    <record id="services_page_link" model="website.menu">
+        <field name="name">Services</field>
+        <field name="page_id" ref="services_page"/>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">1</field>
+    </record>
+
 </odoo>
