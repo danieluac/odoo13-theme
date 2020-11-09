@@ -13,7 +13,6 @@ $font_main: "Sansation_Light";
 body {
     background: transparent;
 }
-
 .before_header {
     i {
         color: white;
@@ -45,8 +44,16 @@ nav .theme_danger {
                         font-family: $font_main;
                         &:hover {
                             border-bottom: 5px solid #dc3545 !important;
+                            border-bottom-right-radius: 5px;
+                            border-bottom-left-radius: 5px;
                             padding-bottom: 1px;
                         }
+                    }
+                    li > a.active {
+                        border-bottom: 5px solid #dc3545 !important;
+                        border-bottom-right-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        padding-bottom: 1px;
                     }
                     div.dropdown-menu {
                             a {
@@ -78,9 +85,17 @@ header#top {
                         font-size: 15px;
                         font-family: $font_main;
                         &:hover {
-                            border-bottom: 5px solid #191a1a;
+                            border-bottom: 5px solid rgba(0,0,0,.4);
+                            border-bottom-right-radius: 5px;
+                            border-bottom-left-radius: 3px;
                             padding-bottom: 1px;
                         }
+                    }
+                    li > a.active {
+                        border-bottom: 5px solid #191a1a !important;
+                        border-bottom-right-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        padding-bottom: 1px;
                     }
                     div.dropdown-menu {
                             a {

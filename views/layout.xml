@@ -11,10 +11,6 @@
             <meta name="apple-mobile-web-app-status-bar-style" content="#191a1a"/>
         </xpath>
 
-         <xpath expr="//body" position="attributes">
-            <field name="onload">setBg()</field>
-        </xpath>
-
         <xpath expr="//div[@id='wrapwrap']/header/nav" position="before">
             <div id="before_header" class="bg-dark before_header">
                 <div class="container-fluid pt-2 pb-2">
@@ -41,6 +37,7 @@
                 </div>
             </div>
         </xpath>
+
         <xpath expr="//div[@id='wrapwrap']/header/div/div/div/div/div/div[hasclass('language')]" position="inside">
             <t id="language_selector_callable" t-call="portal.language_selector">
                 <t t-set="_div_classes" t-value="(_div_classes or '') + ' dropup'"/>
