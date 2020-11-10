@@ -1,3 +1,13 @@
+@font-face {
+    font-family:"lato";
+    src: url("/theme_loengo/static/fonts/Lato-Light.ttf");
+}
+@font-face {
+    font-family:"Sansation_Light";
+    src: url("/theme_loengo/static/fonts/Sansation_Light.ttf");
+}
+$font_main: "Sansation_Light";
+$color-danger: #dc3545;
 
 footer > div.theme_danger,
 header > div.theme_danger {
