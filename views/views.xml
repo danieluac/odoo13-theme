@@ -10,26 +10,26 @@
             <t t-name="theme_tutorial.services_page_template">
                 <t t-call="website.layout">
                     <div id="wrap">
-                        <script>
-                            var url = window.location.pathname;
-                            if(url.split("/").indexOf("services",1) != -1){
-                                window.onload = function (){
-                                    var element = document.getElementById("before_header");
-                                    var element1 = document.getElementById("top_menu_container");
-                                    var element2 = document.getElementById("footer");
-                                    if(typeof element.classList != "undefined"){
-                                        element.classList.remove("bg-dark");
-                                        element.classList.add("theme_danger");
-                                        // element1.classList.remove("bg-dark");
-                                        element1.classList.add("theme_danger");
-                                        element2.classList.add("theme_danger");
-                                    }
-                                    document.querySelectorAll('meta[name="theme-color"]')[0].setAttribute("content","#dc3545")
-                                    document.querySelectorAll('meta[name="msapplication-navbutton-color"]')[0].setAttribute("content","#dc3545")
-                                    document.querySelectorAll('meta[name="apple-mobile-web-app-status-bar-style"]')[0].setAttribute("content","#dc3545")
-                                }
-                            }
-                        </script>
+<!--                        <script>-->
+<!--                            var url = window.location.pathname;-->
+<!--                            if(url.split("/").indexOf("services",1) != -1){-->
+<!--                                window.onload = function (){-->
+<!--                                    var element = document.getElementById("before_header");-->
+<!--                                    var element1 = document.getElementById("top_menu_container");-->
+<!--                                    var element2 = document.getElementById("footer");-->
+<!--                                    if(typeof element.classList != "undefined"){-->
+<!--                                        element.classList.remove("bg-dark");-->
+<!--                                        element.classList.add("theme_danger");-->
+<!--                                        // element1.classList.remove("bg-dark");-->
+<!--                                        element1.classList.add("theme_danger");-->
+<!--                                        element2.classList.add("theme_danger");-->
+<!--                                    }-->
+<!--                                    document.querySelectorAll('meta[name="theme-color"]')[0].setAttribute("content","#dc3545")-->
+<!--                                    document.querySelectorAll('meta[name="msapplication-navbutton-color"]')[0].setAttribute("content","#dc3545")-->
+<!--                                    document.querySelectorAll('meta[name="apple-mobile-web-app-status-bar-style"]')[0].setAttribute("content","#dc3545")-->
+<!--                                }-->
+<!--                            }-->
+<!--                        </script>-->
                         <div class="container">
                             <h1>Our Services</h1>
                             <ul class="services">

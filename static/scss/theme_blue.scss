@@ -42,3 +42,12 @@ nav .theme_blue {
                 }
      }
 }
+
+main {
+    div.theme_blue {
+       a.btn-primary{
+          background: $color-blue !important;
+          border: 1px solid $color-blue !important;
+       }
+    }
+}
