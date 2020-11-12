@@ -10,7 +10,7 @@
     """,
 
     'author': "Daniel AC",
-    'website': "http://www.facebook.com/danieluacDev",
+    'website': "https://github.com/danieluac",
     'category': 'Theme/Loengo',
     'version': '0.1',
 
